@@ -29,7 +29,7 @@ if __name__ == "__main__":
 """
 
 TEST_TEMPLATE = """import unittest
-from solutions.day_01.solution import part1, part2
+from solutions.day_{:02d}.solution import part1, part2
 
 
 class TestDay01(unittest.TestCase):
