@@ -1,0 +1,19 @@
+# virtual enivironment
+.venv/
+
+# cache files
+__pycache__/
+*.pyc
+
+# logs
+.log
+
+# editor and os specific
+.DS_Store
+Thumbs.db
+
+# env 
+.env
+
+# aoc inputs
+input.txt
