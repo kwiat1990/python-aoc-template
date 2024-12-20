@@ -15,7 +15,6 @@ SESSION = os.getenv("AOC_SESSION")
 YEAR = os.getenv("YEAR") or date.today().year
 BASE_URL = "https://adventofcode.com"
 TEMPLATE = """def part1(data):
-    # Implement part 1
     return None
 
 def part2(data):

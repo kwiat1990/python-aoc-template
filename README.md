@@ -43,10 +43,10 @@ root
 |__requirements.txt
 |__solutions
    |__day_<01..25>
-      |_input.txt
-      |_solution.py
-      |_test_solution.py
-      |___init__.py
+      |__input.txt
+      |__solution.py
+      |__test_solution.py
+      |____init__.py
 ```
 
 ## Setting Up
