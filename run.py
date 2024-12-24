@@ -7,8 +7,28 @@ from rich.table import Table
 
 console = Console()
 
+def format_time(duration: float) -> str:
+    """
+    Convert a duration in seconds to a human-readable string with the appropriate unit.
+    Args:
+        duration (float): The duration in seconds.
+    Returns:
+        str: The formatted duration with an appropriate unit.
+    """
+    if duration < 1e-6:
+        return f"{duration * 1e9:.0f} ns"
+    elif duration < 1e-3:
+        return f"{duration * 1e6:.0f} µs"
+    elif duration < 1:
+        return f"{duration * 1e3:.01f} ms"
+    else:
+        return f"{duration:.01f} s"
 
 def run_day(day):
+    """Run tests for a given day as well as solutions with both result and performance of each part
+        Args:
+            day (int): day to run solution for
+    """
     try:
         # Run the tests for the day
         console.print(f"Running tests for Day {day}...")
@@ -22,6 +42,7 @@ def run_day(day):
         else:
             console.print("[red bold]✘ Tests failed:[/red bold]")
             console.print(result.stderr)
+            return
 
         # Run the solution
         console.print(f"Running solution for Day {day}...")
@@ -54,5 +75,5 @@ if __name__ == "__main__":
         run_day(day)
     except IndexError:
         console.print(
-            "[red]Oopla, you forgot to specify a day to fetch\n(e.g. ./run.py 1)[/red] "
+            "[red]Ups, you forgot to specify a day to fetch\n(e.g. ./run.py 1)[/red] "
         )
