@@ -32,7 +32,9 @@ from solutions.day_{:02d}.solution import part1, part2
 
 
 class TestDay01(unittest.TestCase):
-    sample_input = "..."
+    sample_input = """
+...
+"""
 
     def test_part1(self):
         self.assertEqual(part1(self.sample_input), None)
